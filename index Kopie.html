@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link href="Bibliothek/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="Bibliothek/pagevendor/album.css" rel="stylesheet">
+<script>$(function(){
+  player=true;
+$("#selectBar .col").click(function(){
+  id=$(this).index()+1;
+  notbroken=true;
+  for (var i=6;i>1;i--){
+elem =$(".row:nth-child("+i+") .col:nth-child("+id+")");
+  if(elem.attr("data-clicked")!="true"){
+   elem.html((player)?'a':'b');
+elem.attr("data-clicked", "true");
+    notbroken=false;
+    break;
+  }
+ 
+  }
+if(!notbroken){
+   player=!player;
+}//
+else{
+  $("html,body").animate({backgroundColor:"red"},"fast")
+    //$("html,body").animate({backgroundColor:"white"},200)
+  
+}
+  ;});
+  
+});</script>
+  </head>
+  <body>
+    
+<div id="container">
+  <div class="row" id="selectBar">
+ <div class="col btn btn-primary">
+   HI
+  </div>
+ <div class="col btn btn-primary">
+    Hi
+  </div>
+ <div class="col btn btn-primary">
+    Drop
+  </div>
+ <div class="col btn btn-primary">
+    Drop
+  </div>
+ <div class="col btn btn-primary">
+    Drop
+  </div>
+  <div class="col btn btn-primary">
+   Drop
+  </div>
+  <div class="col btn btn-primary">
+    Drop
+  </div>
+ <div class="col btn btn-primary">
+   Drop
+  </div>
+</div>
+<div class="row">
+  <div class="col">hi</div>
+  <div class="col">hi</div>
+  <div class="col">hi</div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+</div>
+  <div class="row">
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+</div>
+  <div class="row">
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+</div>
+  <div class="row">
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+</div>
+  <div class="row">
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+  <div class="col">
+    hi
+  </div>
+</div>
+ 
+  </div>
+ 
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="Bibliothek/vendor/jquery/jquery.slim.min.js"><\/script>')</script><script src="Bibliothek/vendor/bootstrap/js/bootstrap.bundle.js"></script></body>
+</html>
