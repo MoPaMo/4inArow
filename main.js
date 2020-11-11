@@ -1,4 +1,5 @@
 $(function () {
+    audioEnabled=true;
     player = true;
     $("#selectBar .col").click(function () {
       id = $(this).index() + 1;
@@ -14,11 +15,15 @@ $(function () {
 
       }
       if (!notbroken) {
+        if(audioEnabled){
+            audio = new Audio("drop_002.ogg");
+            audio.play()}
         player = !player;
       }//
       else {
-        $("html,body").animate({ backgroundColor: "red" }, "fast")
-        //$("html,body").animate({backgroundColor:"white"},200)
+          if(audioEnabled){
+        audio = new Audio("error_008.ogg");
+        audio.play()}
 
       }
       ;
