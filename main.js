@@ -1,19 +1,37 @@
 $(function () {
   audioEnabled = true;
   player = true;
-  function gBP(row, col) {
+  function gBP(i, id) {
     //getElementByPosition
-    return $(".row:nth-child(" + col + ") .col:nth-child(" + row + ")");
+    return $(".row:nth-child(" + i + ") .col:nth-child(" + id + ")");
   }
-  function checkVictory(){
-    for(var i=1;i<=8;i++){
-      console.log(gBP(2,i+1))
-      if(gBP(2,i+1).attr("data-clicked")=="a"){
-        console.log("a=a")
+  function e(row, col) {
+    return gBP(row + 1, col).attr("data-clicked");
+  }
+  $(".col").attr("data-clicked", "f");
+  function checkVictory() {
+    //loop over rows
+    /*
+ row|-----|----|
+    |-----|----|
+    |-----|----|
+    
+    */
+    for (var row = 1; row <= 5; row++) {
+      for (var col = 1; col <= 8; col++) {
+        if (e(row, col)!="f") {
+          //field is set yet
+          if (e(row, col) == e(row, col + 1)==e(row, col + 2)==e(row, col + 3)) {
+            console.log(e(row, col));
+
+            gBP(row+1,col).css("backgroundColor","red")
+
+          }
+        }
       }
     }
   }
-  $(".col").attr("data-clicked","f")
+  
   $("#selectBar .col").click(function () {
     id = $(this).index() + 1;
     notbroken = true;
@@ -21,7 +39,7 @@ $(function () {
       elem = $(".row:nth-child(" + i + ") .col:nth-child(" + id + ")");
       if (elem.attr("data-clicked") == "f") {
         elem.html(player ? "a" : "b");
-        elem.attr("data-clicked", (player ? "a":"b" ));
+        elem.attr("data-clicked", player ? "a" : "b");
         notbroken = false;
         break;
       }
