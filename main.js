@@ -21,10 +21,14 @@ $(function () {
       for (var col = 1; col <= 8; col++) {
         if (e(row, col)!="f") {
           //field is set yet
-          if (e(row, col) == e(row, col + 1)==e(row, col + 2)==e(row, col + 3)) {
+          //
+          if (col<6&&e(row, col) == e(row, col + 1)&&e(row, col + 1)==e(row, col + 2)&&e(row, col + 2)==e(row, col + 3)) {
             console.log(e(row, col));
 
             gBP(row+1,col).css("backgroundColor","red")
+            gBP(row+1,col+1).css("backgroundColor","red")
+            gBP(row+1,col+2).css("backgroundColor","red")
+            gBP(row+1,col+3).css("backgroundColor","red")
 
           }
         }
